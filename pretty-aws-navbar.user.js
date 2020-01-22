@@ -4,7 +4,11 @@
 // @include https://console.aws.amazon.com/*/home*
 // @include https://*.console.aws.amazon.com/*/home*
 // @include https://*.console.aws.amazon.com/GetResource/Console.html*
-// @version 1 
+// @include https://console.amazonaws-us-gov.com/*/home*
+// @include https://*.console.amazonaws-us-gov.com/*/home*
+// @include https://*.console.amazonaws-us-gov.com/GetResource/Console.html*
+// @exclude https://console.aws.amazon.com/s3/home*
+// @version 1.1 
 //  ==/UserScript==
 
 
@@ -37,6 +41,8 @@ const regions = new Map([
   ['Stockholm', 'eu-north-1'],
   ['Bahrain', 'me-south-1'],
   ['São Paulo', 'sa-east-1'],
+  ['US-Gov-West', 'us-gov-west-1'],
+  ['US-Gov-East', 'us-gov-east-1'],
 ]);
 
 function prettify() {
