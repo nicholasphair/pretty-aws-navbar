@@ -22,27 +22,27 @@ const accountNavBars = new Map([
 ]);
 
 const regions = new Map([
-  ['Ohio', 'us-east-2'],
-  ['N. Virginia', 'us-east-1'],
-  ['N. California', 'us-west-1'],
-  ['Oregon', 'us-west-2'],
-  ['Hong Kong', 'ap-east-1'],
-  ['Mumbai', 'ap-south-1'],
-  ['Osaka-Local', 'ap-northeast-3'],
-  ['Seoul', 'ap-northeast-2'],
-  ['Singapore', 'ap-southeast-1'],
-  ['Sydney', 'ap-southeast-2'],
-  ['Tokyo', 'ap-northeast-1'],
+  ['Bahrain', 'me-south-1'],
   ['Central', 'ca-central-1'],
   ['Frankfurt', 'eu-central-1'],
+  ['Hong Kong', 'ap-east-1'],
   ['Ireland', 'eu-west-1'],
   ['London', 'eu-west-2'],
+  ['Mumbai', 'ap-south-1'],
+  ['N. California', 'us-west-1'],
+  ['N. Virginia', 'us-east-1'],
+  ['Ohio', 'us-east-2'],
+  ['Oregon', 'us-west-2'],
+  ['Osaka-Local', 'ap-northeast-3'],
   ['Paris', 'eu-west-3'],
+  ['Seoul', 'ap-northeast-2'],
+  ['Singapore', 'ap-southeast-1'],
   ['Stockholm', 'eu-north-1'],
-  ['Bahrain', 'me-south-1'],
+  ['Sydney', 'ap-southeast-2'],
   ['São Paulo', 'sa-east-1'],
-  ['US-Gov-West', 'us-gov-west-1'],
+  ['Tokyo', 'ap-northeast-1'],
   ['US-Gov-East', 'us-gov-east-1'],
+  ['US-Gov-West', 'us-gov-west-1'],
 ]);
 
 function prettify() {
@@ -64,9 +64,16 @@ function prettifyNavBar() {
 }
 
 function buildNavBar(color) {
-  let NavBarClasses = 'body #awsgnav #nav-menubar, body #awsgnav #nav-menubar .nav-menu, #nav-menu-right';
-  let NavBarFormat = `{ background: linear-gradient(to bottom, ${color} 0px, #000 100%)}`;
-  return `${NavBarClasses} ${NavBarFormat}`;
+  let NavBarElements = `
+    body #awsgnav #nav-menubar,
+    body #awsgnav #nav-menubar .nav-menu,
+    #nav-menu-right {
+      background-color: transparent;
+    }`;
+  let NavBarBackground = `#consoleNavHeader {
+    background: linear-gradient(to bottom, ${color} 0px, #000 100%);
+  }`;
+  return `${NavBarBackground} ${NavBarElements}`;
 }
 
 function prettifyRegion() {

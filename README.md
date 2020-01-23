@@ -29,7 +29,7 @@ const accountNavBars = new Map([
   ['baz', buildNavBar('OliveDrab')],
 ]);
 ```
-Any html color name or color code is a valid.
+Any html color name or color code is valid.
 
 ## disclaimer
 I am not a javascript developer. In fact, this is the most js I think I have 
