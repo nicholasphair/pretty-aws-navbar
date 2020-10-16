@@ -1,5 +1,7 @@
 # pretty-aws-navbar
-Prettify the AWS Console's Navigation Bar.
+Prettify the AWS Console's Navigation Bar.  
+
+![demo](/screenshots/demo.gif)
 
 ## description
 pretty-aws-navbar changes the color of the AWS console's navigation bar based 
@@ -23,18 +25,23 @@ color names. The relevant snippet is below.
 /* ------------------- */
 /* YOUR ACCOUNTS HERE! */
 /* ------------------- */
-const accountNavBars = new Map([
-  ['foo', buildNavBar('CornflowerBlue')],
-  ['bar', buildNavBar('FireBrick')],
-  ['baz', buildNavBar('OliveDrab')],
+const accountColors = new Map([
+  ['foo', 'CornflowerBlue'],
+  ['bar', 'FireBrick'],
+  ['baz', 'OliveDrab'],
 ]);
 ```
 Any html color name or color code is valid.
 
+### GovCloud
+The GovCloud console has not received the same facelift as the general AWS console.
+If you wish to style a GovCloud navbar, you can use [v1.0.0][2] of `pretty-aws-navbar`.
+
 ## disclaimer
 I am not a javascript developer. In fact, this is the most js I think I have 
 ever written. I certainly did not do anything nefarious but, do not take my 
-word for it. I encourage you to inspect the code yourself - it is less than 
-100 lines. With that said, use at your own risk. 
+word for it. I encourage you to inspect the code yourself - it is less than 100
+lines of code. With that said, use at your own risk. 
 
 [1]: https://www.greasespot.net/
+[2]: https://github.com/nicholasphair/pretty-aws-navbar/tree/v1.0.0
